@@ -11,7 +11,13 @@
             "address": "7002 Chestnut Ct"
         }
     ],
-    "employees": [],
+    "employees": [
+        {
+            "id": 1,
+            "name": "Master Yoda",
+            "address" : "Nashville Kennels North"
+        }
+    ],
     "locations": [
         {
             "id": 1,
