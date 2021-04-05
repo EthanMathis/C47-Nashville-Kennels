@@ -1,11 +1,10 @@
 import React from "react"
 import { Route } from "react-router-dom"
 import { Home } from "./Home"
-import { AnimalCard } from "./animal/AnimalCard";
-import { LocationsCard } from "./Locations/Locations";
-import { CustomersCard } from "./Customers/Customers";
-import { EmployeesCard } from "./Employees/Employees";
+import { LocationList } from "./Locations/LocationsList";
 import { AnimalList } from "./animal/AnimalList";
+import { CustomerList } from "./Customers/CustomerList";
+import { EmployeeList } from "./Employees/EmployeeList";
 
 export const ApplicationViews = () => {
     return (
@@ -21,27 +20,15 @@ export const ApplicationViews = () => {
             </Route>
 
             <Route path="/locations">
-            <h2>Locations</h2>
-            <article className="animals">
-                <LocationsCard />
-                <LocationsCard />
-            </article>
+                <LocationList />
             </Route>
 
             <Route path="/customers">
-            <h2>Customers</h2>
-            <article className="animals">
-                <CustomersCard />
-                <CustomersCard />
-            </article>
+                <CustomerList />
             </Route>
 
             <Route path="/employees">
-            <h2>Employees</h2>
-            <article className="animals">
-                <EmployeesCard />
-                <EmployeesCard />
-            </article>
+                <EmployeeList />
             </Route>
         </>
     )
