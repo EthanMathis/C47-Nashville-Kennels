@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 //import the components we will need
 import { LocationsCard } from "./LocationsCard";
-import { getAllLocations } from "../../modules/LocationsManager";
+import { deleteLocation, getAllLocations } from "../../modules/LocationsManager";
 
 export const LocationList = () => {
 
@@ -13,6 +13,11 @@ export const LocationList = () => {
         })
     }
 
+    const handleDeleteLocation = (id) => {
+        deleteLocation(id)
+        .then(() => getLocations())
+    }
+
     useEffect(() => {
         getLocations();
     }, [])
@@ -21,7 +26,10 @@ export const LocationList = () => {
     return (
         <div className="container-cards">
             <article className="locations">
-                {locations.map(loc => <LocationsCard key={loc.id} location={loc} />)}
+                {locations.map(loc => <LocationsCard 
+                                       key={loc.id}  
+                                       location={loc}
+                                       handleDeleteLocation={handleDeleteLocation} />)}
             </article>
         </div>
     )
