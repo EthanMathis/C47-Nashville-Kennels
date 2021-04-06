@@ -1,6 +1,6 @@
 import React, { useEffect, useState }  from "react";
 import { EmployeeCard } from "./EmployeeCard";
-import { getAllEmployees } from "../../modules/EmployeeManager";
+import { deleteEmployee, getAllEmployees } from "../../modules/EmployeeManager";
 
 export const EmployeeList = () => {
         // The initial state is an empty array
@@ -14,6 +14,11 @@ export const EmployeeList = () => {
         });
     };
 
+    const handleDeleteEmployees = (id) => {
+        deleteEmployee(id)
+        .then(getEmployees)
+    }
+
     // got the employees from the API on the component's first render
     useEffect(() => {
         getEmployees();
@@ -23,7 +28,10 @@ export const EmployeeList = () => {
     return (
         <div className="container-cards">
             <article className="employees">
-                {employees.map(emp => <EmployeeCard key={emp.id} employee={emp} />)}
+                {employees.map(emp => <EmployeeCard 
+                                       key={emp.id} 
+                                       employee={emp} 
+                                       handleDeleteEmployees={handleDeleteEmployees} />)}
             </article>
         </div>
     )
