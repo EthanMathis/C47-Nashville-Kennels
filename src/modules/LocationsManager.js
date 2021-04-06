@@ -1,5 +1,10 @@
 const remoteURL = "http://localhost:5002"
 
+export const getLocationById = (id) => {
+    return fetch(`${remoteURL}/locations/${id}`)
+    .then(response => response.json())
+}
+
 export const getAllLocations = () => {
     return fetch(`${remoteURL}/locations`)
     .then(result => result.json())
