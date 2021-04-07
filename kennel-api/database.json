@@ -50,12 +50,14 @@
     {
       "id": 1,
       "name": "Master Yoda",
-      "address": "Nashville Kennels North"
+      "employer": "Nashville Kennels North",
+      "locationId": 1
     },
     {
       "id": 2,
       "name": "Padme Amidala",
-      "address": "Nashville Kennels South"
+      "employer": "Nashville Kennels South",
+      "locationId": 2
     }
   ],
   "locations": [
@@ -73,6 +75,11 @@
       "id": 3,
       "name": "The Gulch",
       "address": "1201 5th Ave N"
+    },
+    {
+      "id": 4,
+      "name": "Nashville Midtown",
+      "address": "1010 Forrest Ave"
     }
   ]
 }

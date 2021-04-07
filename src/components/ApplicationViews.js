@@ -8,6 +8,8 @@ import { EmployeeList } from "./Employees/EmployeeList";
 import { AnimalDetail } from "./animal/AnimalDetail";
 import { LocationDetail } from "./Locations/LocationsDetail";
 import { AnimalForm } from "./animal/AnimalForm";
+import { LocationForm } from "./Locations/LocationsForm";
+import { EmployeeDetail } from "./Employees/EmployeeDetail";
 
 export const ApplicationViews = () => {
     return (
@@ -24,6 +26,10 @@ export const ApplicationViews = () => {
                 <AnimalDetail />
             </Route>
 
+            <Route path="/animals/create">
+                <AnimalForm />
+            </Route>
+
             <Route exact path="/locations">
                 <LocationList />
             </Route>
@@ -32,17 +38,22 @@ export const ApplicationViews = () => {
                 <LocationDetail />
             </Route>
 
+            <Route path="/locations/create">
+                <LocationForm />
+            </Route>
+
             <Route path="/customers">
                 <CustomerList />
             </Route>
 
-            <Route path="/employees">
+            <Route exact path="/employees">
                 <EmployeeList />
             </Route>
 
-            <Route path="/animals/create">
-                <AnimalForm />
+            <Route path="/employees/:employeeId(\d+)">
+                <EmployeeDetail />
             </Route>
+
         </>
     )
 }

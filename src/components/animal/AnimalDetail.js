@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { useParams, useHistory } from "react-router-dom"
 import { getAnimalById, deleteAnimal } from '../../modules/AnimalManager';
 import './AnimalDetail.css';
-import { useParams, useHistory } from "react-router-dom"
 
 
 export const AnimalDetail = () => {
@@ -37,7 +37,7 @@ export const AnimalDetail = () => {
   return (
     <section className="animal">
       <h3 className="animal__name">{animal.name}</h3>
-      <div className="animal__breed">{animal.breed}</div>
+      <div className="animal__breed">Breed: {animal.breed}</div>
       {/* What's up with the question mark???? See below.*/}
       <div className="animal__location">Location: {animal.location?.name}</div>
       <div className="animal__owner">Customer: {animal.customer?.name}</div>

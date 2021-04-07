@@ -2,6 +2,7 @@ import React from "react"
 import "./Animal.css"
 import { Link } from "react-router-dom"
 
+
 export const AnimalCard = ({ animal, handleDeleteAnimal }) => (
     <section className="animal">
         <h3 className="animal__name">{animal.name}</h3>
