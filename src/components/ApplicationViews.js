@@ -7,16 +7,15 @@ import { CustomerList } from "./Customers/CustomerList";
 import { EmployeeList } from "./Employees/EmployeeList";
 import { AnimalDetail } from "./animal/AnimalDetail";
 import { LocationDetail } from "./Locations/LocationsDetail";
+import { AnimalForm } from "./animal/AnimalForm";
 
 export const ApplicationViews = () => {
     return (
         <>
-            {/* Render the location list when http://localhost:3000/ */}
             <Route exact path="/">
                 <Home />
             </Route>
 
-            {/* Render the animal list when http://localhost:3000/animals */}
             <Route exact path="/animals">
                 <AnimalList />
             </Route>
@@ -41,6 +40,9 @@ export const ApplicationViews = () => {
                 <EmployeeList />
             </Route>
 
+            <Route path="/animals/create">
+                <AnimalForm />
+            </Route>
         </>
     )
 }

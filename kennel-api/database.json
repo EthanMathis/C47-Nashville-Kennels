@@ -13,15 +13,20 @@
       "breed": "German Shepherd",
       "locationId": 2,
       "customerId": 3
-
     },
-    { 
-        "id": 3, 
-        "name": "Esme", 
-        "breed": "Pitbull",
-        "locationId": 1,
-        "customerId": 1
-   
+    {
+      "id": 3,
+      "name": "Esme",
+      "breed": "Pitbull",
+      "locationId": 1,
+      "customerId": 1
+    },
+    {
+      "name": "Tate",
+      "breed": "Cat",
+      "locationId": 3,
+      "customerId": 3,
+      "id": 4
     }
   ],
   "customers": [
@@ -31,14 +36,14 @@
       "address": "7002 Chestnut Ct"
     },
     {
-        "id": 2,
-        "name": "Jack Bauer",
-        "address": "2424 Santa Monica Blvd"
+      "id": 2,
+      "name": "Jack Bauer",
+      "address": "2424 Santa Monica Blvd"
     },
     {
-        "id": 3,
-        "name": "Chloe O'Bryan",
-        "address": "359 Wolfe St"
+      "id": 3,
+      "name": "Chloe O'Bryan",
+      "address": "359 Wolfe St"
     }
   ],
   "employees": [
@@ -48,9 +53,9 @@
       "address": "Nashville Kennels North"
     },
     {
-        "id": 2,
-        "name": "Padme Amidala",
-        "address": "Nashville Kennels South"
+      "id": 2,
+      "name": "Padme Amidala",
+      "address": "Nashville Kennels South"
     }
   ],
   "locations": [
@@ -63,6 +68,11 @@
       "id": 2,
       "name": "Nashville South",
       "address": "209 Emory Drive"
+    },
+    {
+      "id": 3,
+      "name": "The Gulch",
+      "address": "1201 5th Ave N"
     }
   ]
 }
