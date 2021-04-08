@@ -16,7 +16,7 @@ export const AnimalForm = () => {
 		customerId: 0
 	});
 
-	// const [isLoading, setIsLoading] = useState(true);
+	const [isLoading, setIsLoading] = useState(false);
 
 	// you will need the the `getAll` in the LocationsManager and CustomersManager to complete this section
 	const [locations, setLocations] = useState([]);
@@ -64,6 +64,7 @@ export const AnimalForm = () => {
 
 	const handleClickSaveAnimal = (event) => {
 		event.preventDefault() //Prevents the browser from submitting the form
+		setIsLoading(true)
 
 		const locationId = animal.locationId
 		const customerId = animal.customerId
@@ -120,6 +121,7 @@ export const AnimalForm = () => {
 				</div>
 			</fieldset>
 			<button className="btn btn-primary"
+				disabled={isLoading}
 				onClick={handleClickSaveAnimal}>
 				Save Animal
           </button>
