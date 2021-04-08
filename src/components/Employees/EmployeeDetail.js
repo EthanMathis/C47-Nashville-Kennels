@@ -17,7 +17,7 @@ export const EmployeeDetail = () => {
             setEmployee({
                 name: employee.name,
                 employer: employee.employer,
-                address: employee.location
+                location: employee.location
             });
             setIsLoading(false);
         });

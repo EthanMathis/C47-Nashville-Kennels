@@ -22,42 +22,59 @@
       "customerId": 1
     },
     {
+      "id": 4,
       "name": "Tate",
       "breed": "Cat",
       "locationId": 3,
-      "customerId": 3,
-      "id": 4
+      "customerId": 4
     }
   ],
   "customers": [
     {
       "id": 1,
       "name": "Hannah Hall",
-      "address": "7002 Chestnut Ct"
+      "address": "7002 Chestnut Ct",
+      "email": "hannah@nss.com"
     },
     {
       "id": 2,
       "name": "Jack Bauer",
-      "address": "2424 Santa Monica Blvd"
+      "address": "2424 Santa Monica Blvd",
+      "email": "jack@nss.com"
     },
     {
       "id": 3,
       "name": "Chloe O'Bryan",
-      "address": "359 Wolfe St"
+      "address": "359 Wolfe St",
+      "email": "chloe@nss.com"
+    },
+    {
+      "id": 4,
+      "name": "Ethan Mathis",
+      "email": "ethan@nss.com",
+      "address": "326 Charley Ave"
     }
   ],
   "employees": [
     {
       "id": 1,
       "name": "Master Yoda",
-      "employer": "Nashville Kennels North",
       "locationId": 1
     },
     {
       "id": 2,
       "name": "Padme Amidala",
-      "employer": "Nashville Kennels South",
       "locationId": 2
+    },
+    {
+      "name": "Kenny Loggins",
+      "locationId": 3,
+      "id": 3
+    },
+    {
+      "name": "Brenda",
+      "locationId": 4,
+      "id": 4
     }
   ],
   "locations": [
