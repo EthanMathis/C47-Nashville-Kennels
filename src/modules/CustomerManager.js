@@ -10,3 +10,8 @@ export const deleteCustomer = (id) => {
       method: "DELETE"
     }).then(result => result.json())
   }
+
+  export const getCustomerById = (id) => {
+    return fetch(`${remoteURL}/customers/${id}?_expand=animal`)
+    .then(result => result.json())
+  }
