@@ -34,25 +34,29 @@
       "id": 1,
       "name": "Hannah Hall",
       "address": "7002 Chestnut Ct",
-      "email": "hannah@nss.com"
+      "email": "hannah@nss.com",
+      "animalId": 3
     },
     {
       "id": 2,
       "name": "Jack Bauer",
       "address": "2424 Santa Monica Blvd",
-      "email": "jack@nss.com"
+      "email": "jack@nss.com",
+      "animalId": 1
     },
     {
       "id": 3,
       "name": "Chloe O'Bryan",
       "address": "359 Wolfe St",
-      "email": "chloe@nss.com"
+      "email": "chloe@nss.com",
+      "animalId": 2
     },
     {
       "id": 4,
       "name": "Ethan Mathis",
       "email": "ethan@nss.com",
-      "address": "326 Charley Ave"
+      "address": "326 Noah Ave",
+      "animalId": 4
     }
   ],
   "employees": [

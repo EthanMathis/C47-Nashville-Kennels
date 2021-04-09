@@ -16,7 +16,7 @@ export const AnimalEditForm = () => {
   const history = useHistory();
 
   const handleFieldChange = evt => {
-    const newAnimal = { ...animal };
+    const newAnimal = {...animal};
     let selected = evt.target.value
     if (evt.target.id.includes("Id")) {
         selected = parseInt(selected)
@@ -126,8 +126,9 @@ export const AnimalEditForm = () => {
             <button
               type="button" disabled={isLoading}
               onClick={updateExistingAnimal}
-              className="btn btn-primary"
-            >Submit</button>
+              className="btn btn-primary">
+                Submit
+            </button>
           </div>
         </fieldset>
       </form>

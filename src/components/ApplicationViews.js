@@ -4,6 +4,7 @@ import { Home } from "./Home"
 import { LocationList } from "./Locations/LocationsList";
 import { AnimalList } from "./animal/AnimalList";
 import { CustomerList } from "./Customers/CustomerList";
+import { CustomerDetail } from "./Customers/CustomerDetail";
 import { EmployeeList } from "./Employees/EmployeeList";
 import { AnimalDetail } from "./animal/AnimalDetail";
 import { LocationDetail } from "./Locations/LocationsDetail";
@@ -14,15 +15,10 @@ import { Login } from "./auth/Login";
 import { Register } from "./auth/Register";
 import { AnimalEditForm } from "./animal/AnimalEditForm";
 import { EmployeeForm } from "./Employees/EmployeeForm";
+import { CustomerEditForm } from "./Customers/CustomerFormEdit";
 
-export const ApplicationViews = () => {
+export const ApplicationViews = ({isAuthenticated, setAuthUser}) => {
 
-    const [isAuthenticated, setIsAuthenticated] = useState(sessionStorage.getItem("kennel_customer") !== null)
-
-    const setAuthUser = (user) => {
-        sessionStorage.setItem("kennel_customer", JSON.stringify(user))
-        setIsAuthenticated(sessionStorage.getItem("kennel_customer") !== null)
-}
 
     return (
         <>
@@ -66,8 +62,16 @@ export const ApplicationViews = () => {
                 <LocationForm />
             </Route>
 
-            <Route path="/customers">
+            <Route exact path="/customers">
                 <CustomerList />
+            </Route>
+
+            <Route exact path="/customers/:customerId(\d+)">
+                <CustomerDetail />
+            </Route>
+
+            <Route path="/customers/:customerId(\d+)/edit">
+                <CustomerEditForm />
             </Route>
 
             <Route exact path="/employees">
