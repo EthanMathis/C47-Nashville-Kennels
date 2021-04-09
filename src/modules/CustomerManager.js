@@ -15,3 +15,13 @@ export const deleteCustomer = (id) => {
     return fetch(`${remoteURL}/customers/${id}?_expand=animal`)
     .then(result => result.json())
   }
+
+  export const updateCustomer = (editedCustomer) => {
+    return fetch(`${remoteURL}/customers/${editedCustomer.id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(editedCustomer)
+    }).then(response => response.json())
+  }

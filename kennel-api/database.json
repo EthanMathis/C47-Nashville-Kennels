@@ -35,7 +35,7 @@
       "name": "Hannah Hall",
       "address": "7002 Chestnut Ct",
       "email": "hannah@nss.com",
-      "animalId":3
+      "animalId": 3
     },
     {
       "id": 2,
@@ -55,7 +55,7 @@
       "id": 4,
       "name": "Ethan Mathis",
       "email": "ethan@nss.com",
-      "address": "326 Charley Ave",
+      "address": "326 Noah Ave",
       "animalId": 4
     }
   ],

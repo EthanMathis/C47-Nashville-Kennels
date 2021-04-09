@@ -15,6 +15,7 @@ import { Login } from "./auth/Login";
 import { Register } from "./auth/Register";
 import { AnimalEditForm } from "./animal/AnimalEditForm";
 import { EmployeeForm } from "./Employees/EmployeeForm";
+import { CustomerEditForm } from "./Customers/CustomerFormEdit";
 
 export const ApplicationViews = ({isAuthenticated, setAuthUser}) => {
 
@@ -65,8 +66,12 @@ export const ApplicationViews = ({isAuthenticated, setAuthUser}) => {
                 <CustomerList />
             </Route>
 
-            <Route path="/customers/:customerId(\d+)">
+            <Route exact path="/customers/:customerId(\d+)">
                 <CustomerDetail />
+            </Route>
+
+            <Route path="/customers/:customerId(\d+)/edit">
+                <CustomerEditForm />
             </Route>
 
             <Route exact path="/employees">
